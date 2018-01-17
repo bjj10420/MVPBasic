@@ -8,5 +8,5 @@ import dagger.Module;
 public abstract class MainModule {
 
     @Binds
-    public abstract TestObject bindPresenter();
+    public abstract TestObject bindTestObject(TestObject testObject);
 }
