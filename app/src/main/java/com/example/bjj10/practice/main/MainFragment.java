@@ -1,0 +1,50 @@
+package com.example.bjj10.practice.main;
+
+import android.support.v4.app.Fragment;
+import android.os.Bundle;
+import android.view.LayoutInflater;
+import android.view.View;
+import android.view.ViewGroup;
+import android.widget.Button;
+import android.widget.Toast;
+
+import com.example.bjj10.practice.R;
+
+public class MainFragment extends Fragment implements MainContract.View {
+
+    private MainContract.Presenter presenter;
+
+    @Override
+    public void setPresenter(MainContract.Presenter presenter) {
+        this.presenter = presenter;
+    }
+
+    @Override
+    public boolean showToast() {
+        Toast.makeText(getContext(), "MVP Test", Toast.LENGTH_LONG).show();
+        return false;
+    }
+
+    @Override
+    public View onCreateView(LayoutInflater inflater, ViewGroup container,
+                             Bundle savedInstanceState) {
+        View root = inflater.inflate(R.layout.fragment_main, container, false);
+        setEvent(root);
+        return root;
+    }
+
+    private void setEvent(View root) {
+        Button practiceBtn = root.findViewById(R.id.practiceBtn);
+        practiceBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                presenter.onClick();
+            }
+        });
+    }
+
+    public static MainFragment newInstance() {
+        return new MainFragment();
+    }
+
+}
