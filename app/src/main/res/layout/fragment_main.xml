@@ -5,8 +5,8 @@
 
     <Button
         android:id="@+id/practiceBtn"
-        android:layout_width="30dp"
-        android:layout_height="30dp"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
         android:text="연습용 버튼"
 
         />

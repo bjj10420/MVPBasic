@@ -28,13 +28,13 @@ public class MainFragment extends Fragment implements MainContract.View {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        View root = inflater.inflate(R.layout.fragment_main, container, false);
-        setEvent(root);
-        return root;
+        View fragmentView = inflater.inflate(R.layout.fragment_main, container, false);
+        setEvent(fragmentView);
+        return fragmentView;
     }
 
-    private void setEvent(View root) {
-        Button practiceBtn = root.findViewById(R.id.practiceBtn);
+    private void setEvent(View fragmentView) {
+        Button practiceBtn = fragmentView.findViewById(R.id.practiceBtn);
         practiceBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
