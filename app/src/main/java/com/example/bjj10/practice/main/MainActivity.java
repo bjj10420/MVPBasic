@@ -1,12 +1,15 @@
 package com.example.bjj10.practice.main;
 
+import android.databinding.DataBindingUtil;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.Button;
 
 import com.example.bjj10.practice.R;
+import com.example.bjj10.practice.databinding.ActivityMainBinding;
 import com.example.bjj10.practice.util.Util;
 
-import static dagger.internal.Preconditions.checkNotNull;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -17,12 +20,12 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         init();
-        //
     }
 
     private void init() {
         MainFragment mainFragment = initMainFragment();
         initMainPresenter(mainFragment);
+        initPracticeBtn();
     }
 
     private MainFragment initMainFragment() {
@@ -38,6 +41,17 @@ public class MainActivity extends AppCompatActivity {
 
     private void initMainPresenter(MainFragment mainFragment) {
         mainPresenter = new MainPresenter(mainFragment);
+    }
+
+    private void initPracticeBtn() {
+        Button practiceBtn = findViewById(R.id.activity_practiceBtn);
+        ActivityMainBinding binding = DataBindingUtil.setContentView(this, R.layout.activity_main);
+        binding.activityPracticeBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                mainPresenter.onClick();
+            }
+        });
     }
 
 }

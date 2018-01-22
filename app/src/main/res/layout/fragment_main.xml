@@ -4,10 +4,8 @@
     android:layout_height="match_parent">
 
     <Button
-        android:id="@+id/practiceBtn"
+        android:id="@+id/fragment_practiceBtn"
         android:layout_width="100dp"
         android:layout_height="100dp"
-        android:text="연습용 버튼"
-
-        />
+        android:text="프래그먼트 연습용 버튼" />
 </android.support.constraint.ConstraintLayout>

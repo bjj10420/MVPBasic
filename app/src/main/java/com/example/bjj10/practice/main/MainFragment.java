@@ -34,7 +34,7 @@ public class MainFragment extends Fragment implements MainContract.View {
     }
 
     private void setEvent(View fragmentView) {
-        Button practiceBtn = fragmentView.findViewById(R.id.practiceBtn);
+        Button practiceBtn = fragmentView.findViewById(R.id.fragment_practiceBtn);
         practiceBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
