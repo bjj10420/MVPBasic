@@ -30,7 +30,6 @@ public class MainFragment extends Fragment implements MainContract.View {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-//      View fragmentView = inflater.inflate(R.layout.fragment_main, container, false);
         FragmentMainBinding binding = DataBindingUtil.inflate(inflater, R.layout.fragment_main, container, false);
         View fragmentView = binding.getRoot();
         binding.fragmentPracticeBtn.setOnClickListener(new View.OnClickListener() {
@@ -39,18 +38,7 @@ public class MainFragment extends Fragment implements MainContract.View {
                 presenter.onClick();
             }
         });
-        //        setEvent(fragmentView);
         return fragmentView;
-    }
-
-    private void setEvent(View fragmentView) {
-        Button practiceBtn = fragmentView.findViewById(R.id.fragment_practiceBtn);
-        practiceBtn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                presenter.onClick();
-            }
-        });
     }
 
     public static MainFragment newInstance() {
