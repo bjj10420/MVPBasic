@@ -5,7 +5,6 @@ import android.support.annotation.NonNull;
 
 import static android.support.v4.util.Preconditions.checkNotNull;
 
-
 public class MainPresenter implements MainContract.Presenter {
 
     private MainContract.View mainView;
