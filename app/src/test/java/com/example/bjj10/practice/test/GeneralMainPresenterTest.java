@@ -5,6 +5,8 @@ import com.example.bjj10.practice.main.MainFragment;
 
 import junit.framework.Assert;
 import org.junit.Test;
+import org.junit.runner.RunWith;
+import org.junit.runners.JUnit4;
 
 import static org.mockito.Mockito.mock;
 import static org.mockito.Mockito.verify;
@@ -22,4 +24,5 @@ public class GeneralMainPresenterTest {
 //        Assert.assertEquals(1, gp.sum());
     }
 
-}
+
+    }
