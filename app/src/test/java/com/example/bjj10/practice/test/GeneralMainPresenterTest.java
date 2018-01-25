@@ -16,7 +16,7 @@ public class GeneralMainPresenterTest {
         MainContract.MainView mainView = mock(MainContract.MainView.class);
         GeneralPresenter gp = new GeneralPresenter(mainView);
         Assert.assertEquals(3, gp.sum());
-        verify(mainView).showLog();
+        verify(mainView).showToast();
 
 //        Assert.assertEquals(2, gp.sum());
 //        Assert.assertEquals(1, gp.sum());
