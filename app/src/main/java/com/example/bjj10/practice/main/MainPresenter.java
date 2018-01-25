@@ -7,10 +7,10 @@ import static android.support.v4.util.Preconditions.checkNotNull;
 
 public class MainPresenter implements MainContract.Presenter {
 
-    private MainContract.View mainView;
+    private MainContract.MainView mainView;
 
     @SuppressLint("RestrictedApi")
-    public MainPresenter(@NonNull MainContract.View mainView) {
+    public MainPresenter(@NonNull MainContract.MainView mainView) {
         this.mainView = checkNotNull(mainView, "tasksView cannot be null!");
         mainView.setPresenter(this);
     }

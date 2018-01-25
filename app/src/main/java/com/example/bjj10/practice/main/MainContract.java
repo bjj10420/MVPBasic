@@ -6,8 +6,9 @@ import com.example.bjj10.practice.inter.BaseView;
 
 public interface MainContract {
 
-    interface View extends BaseView<Presenter> {
+    interface MainView extends BaseView<Presenter> {
         boolean showToast();
+        boolean showLog();
     }
 
     interface Presenter extends BasePresenter {

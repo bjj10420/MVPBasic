@@ -6,13 +6,12 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.Button;
 import android.widget.Toast;
 
 import com.example.bjj10.practice.R;
 import com.example.bjj10.practice.databinding.FragmentMainBinding;
 
-public class MainFragment extends Fragment implements MainContract.View {
+public class MainFragment extends Fragment implements MainContract.MainView {
 
     private MainContract.Presenter presenter;
 
@@ -24,6 +23,11 @@ public class MainFragment extends Fragment implements MainContract.View {
     @Override
     public boolean showToast() {
         Toast.makeText(getContext(), "MVP Test", Toast.LENGTH_LONG).show();
+        return false;
+    }
+
+    @Override
+    public boolean showLog() {
         return false;
     }
 
